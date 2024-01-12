@@ -10,7 +10,7 @@ export function useAnimeSearch(searchTerm) {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://animxer-api-phi.vercel.app/meta/anilist/${searchTerm}`,
+          `https://animxer-api-cvxg.vercel.app/meta/anilist/${searchTerm}`,
         );
         setAnimeList(response.data.results);
         setLoading(false);
