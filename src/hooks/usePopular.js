@@ -7,7 +7,7 @@ export function usePopular() {
 
   async function getTrending() {
     const response = await axios.get(
-      `https://api.consumet.org/meta/anilist/popular`,
+      `https://animxer-api-phi.vercel.app/meta/anilist/popular`,
     );
     setPopular(response.data.results);
     setLoading(false);
