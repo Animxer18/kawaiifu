@@ -15,7 +15,7 @@ export default function PopularAnime() {
   React.useEffect(() => {
     const page = 1;
     const perPage = 20;
-    const url = `https://animxer-api-phi.vercel.app/meta/anilist/popular?page=${page}&perPage=${perPage}`;
+    const url = `https://animxer-api-cvxg.vercel.app/meta/anilist/popular?page=${page}&perPage=${perPage}`;
     const fetchedAnime = async () => {
       const data = await fetch(url);
       const animeData = await data.json();
