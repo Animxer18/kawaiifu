@@ -7,7 +7,7 @@ export function useTrending() {
 
   async function getTrending() {
     const response = await axios.get(
-      `https://api.consumet.org/meta/anilist/trending`,
+      `https://animxer-api-phi.vercel.app/meta/anilist/trending`,
     );
     setTrending(response.data.results);
     setLoading(false);
