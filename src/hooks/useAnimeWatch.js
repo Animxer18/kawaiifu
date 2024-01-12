@@ -9,7 +9,7 @@ export function useAnimeWatch(id) {
   async function getAnimeWatch() {
     const provider = 'gogoanime';
     const response = await axios.get(
-      `https://api.consumet.org/meta/anilist/info/${id}?provider=${provider}`,
+      `https://animxer-api-phi.vercel.app/meta/anilist/info/${id}?provider=${provider}`,
     );
     setAnimeWatch(response.data);
     console.log(response.data.episodes);
@@ -21,7 +21,7 @@ export function useAnimeWatch(id) {
       const getWatchId = response.data.episodes[0].id;
       console.log(getWatchId);
       const watchResponse = await axios.get(
-        `https://api.consumet.org/meta/anilist/watch/${getWatchId}`,
+        `https://animxer-api-phi.vercel.app/meta/anilist/watch/${getWatchId}`,
       );
 
       setWatchId(watchResponse.data);
@@ -48,7 +48,7 @@ export function useEpisodeId(id) {
 
   async function getEpisodeId() {
     const response = await axios.get(
-      `https://api.consumet.org/meta/anilist/watch/${id}`,
+      `https://animxer-api-phi.vercel.app/meta/anilist/watch/${id}`,
     );
     setEpisodeId(response.data);
     setLoading(false);
